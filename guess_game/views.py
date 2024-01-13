@@ -10,7 +10,6 @@ class WordListView(generics.ListAPIView):
     def get_queryset(self):
         level = self.kwargs.get('level', None)
         amount = self.kwargs.get('amount', 10)
-        subject = self.kwargs.get('subject', None)
 
         queryset = Word.objects.all()
 
